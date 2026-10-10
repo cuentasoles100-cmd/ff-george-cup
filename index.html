@@ -100,7 +100,7 @@ function apply(){
  if(data.welcome) document.getElementById('welcome').textContent=data.welcome;
  if(data.prize) document.querySelector('.price').textContent=data.prize;
  if(data.name){document.querySelector('.logo').innerHTML='FF <span>'+data.name.replace(/^FF\\s*/i,'')+'</span> ⚡';document.title=data.name+' | Torneos Free Fire'}
- if(data.image){document.querySelector('.visual').style.backgroundImage=`linear-gradient(#0005,#0005),url("${data.image}")`;document.querySelector('.visual').style.backgroundSize='cover';}
+ if(data.image){document.querySelector('.visual').style.backgroundImage=`linear-gradient(#0005,#0005),url("${data.image}")`;document.querySelector('.visual').style.backgroundSize='contain';}
 }
 function openEditor(){
  document.getElementById('editWelcome').value=document.getElementById('welcome').textContent;
