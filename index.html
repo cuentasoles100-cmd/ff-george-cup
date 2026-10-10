@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FF George CUP | Torneos Free Fire</title>
+<style>
+:root{--red:#e50914;--dark:#090909;--card:#151515;--text:#fff;--muted:#b8b8b8}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(145deg,#050505,#170707);color:var(--text)}
+header{position:sticky;top:0;z-index:10;background:#080808eF;border-bottom:1px solid #3b1111;backdrop-filter:blur(10px)}
+.nav{max-width:1100px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.logo{font-weight:900;font-size:1.35rem;letter-spacing:.5px}.logo span{color:var(--red)}
+nav a{color:#fff;text-decoration:none;margin-left:18px;font-weight:700;font-size:.95rem}
+.btn{display:inline-block;padding:13px 18px;border-radius:10px;background:var(--red);color:#fff;text-decoration:none;font-weight:800;border:0;cursor:pointer;box-shadow:0 8px 25px #e5091433}
+.btn.alt{background:#242424;border:1px solid #444}
+.hero{max-width:1100px;margin:auto;padding:80px 20px 55px;display:grid;grid-template-columns:1.25fr .75fr;gap:35px;align-items:center}
+.badge{display:inline-block;border:1px solid #6e1717;background:#260b0b;color:#ff6b6b;padding:7px 11px;border-radius:999px;font-size:.82rem;font-weight:800}
+h1{font-size:clamp(2.7rem,7vw,5.7rem);line-height:.9;margin:18px 0} h1 span{color:var(--red)}
+.hero p{color:#d0d0d0;font-size:1.08rem;line-height:1.6;max-width:620px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.visual{min-height:330px;border-radius:25px;border:1px solid #531313;background:radial-gradient(circle at 50% 30%,#b20d18 0,#39090c 35%,#0b0b0b 72%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.visual:before,.visual:after{content:"";position:absolute;border:1px solid #ff303055;border-radius:50%;width:300px;height:300px}.visual:after{width:180px;height:180px}
+.trophy{font-size:7rem;filter:drop-shadow(0 0 30px #ff2020);z-index:1}
+section{max-width:1100px;margin:auto;padding:45px 20px}.title{font-size:2rem;margin:0 0 8px}.sub{color:var(--muted);margin:0 0 25px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:linear-gradient(145deg,#171717,#101010);border:1px solid #302020;border-radius:18px;padding:22px}.card h3{margin-top:0}.price{font-size:2.2rem;font-weight:900;color:#ff4040}.icon{font-size:2rem}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.form input,.form textarea{width:100%;padding:13px;border-radius:10px;border:1px solid #3a3a3a;background:#0d0d0d;color:#fff}.form textarea{min-height:120px;grid-column:1/-1}.full{grid-column:1/-1}
+.contact{display:flex;flex-wrap:wrap;gap:12px}
+footer{border-top:1px solid #2b1111;text-align:center;color:#aaa;padding:30px 20px}
+#editor{display:none;position:fixed;inset:0;background:#000b;z-index:30;padding:20px;overflow:auto}
+.modal{max-width:650px;margin:30px auto;background:#151515;border:1px solid #572020;border-radius:18px;padding:25px}.modal label{display:block;margin:14px 0 6px;font-weight:700}.modal input{width:100%;padding:12px;background:#0b0b0b;color:#fff;border:1px solid #444;border-radius:9px}.modal-actions{display:flex;gap:10px;margin-top:20px}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:55px}.grid{grid-template-columns:1fr}.form{grid-template-columns:1fr}.visual{min-height:240px}nav a{display:none}}
+</style>
+</head>
+<body>
+<header><div class="nav">
+<div class="logo">FF <span>GEORGE CUP</span> ⚡</div>
+<nav><a href="#torneo">Torneo</a><a href="#inscripcion">Inscripción</a><a href="#contacto">Contacto</a></nav>
+<button class="btn alt" onclick="openEditor()">✏️ Editar página</button>
+</div></header>
+
+<main>
+<section class="hero">
+<div>
+<div class="badge">🇵🇪 TORNEOS FREE FIRE</div>
+<h1>FF <span>GEORGE</span> CUP</h1>
+<p id="welcome">HOLA BIENVENIDO A TORNEOS FF George CUP</p>
+<p>Demuestra tu nivel, participa y compite por el premio del primer lugar.</p>
+<div class="actions"><a class="btn" href="#inscripcion">🏆 Inscribirme</a><a class="btn alt" href="#contacto">📲 Contactar</a></div>
+</div>
+<div class="visual"><div class="trophy">🏆</div></div>
+</section>
+
+<section id="torneo">
+<h2 class="title">🏆 Torneo destacado</h2><p class="sub">Toda la información principal en un solo lugar.</p>
+<div class="grid">
+<div class="card"><div class="icon">💰</div><h3>Premio</h3><div class="price">S/ 60</div><p>Para el primer lugar.</p></div>
+<div class="card"><div class="icon">🎮</div><h3>Competencia</h3><p>Participa en los torneos de FF George CUP y demuestra tus habilidades.</p></div>
+<div class="card"><div class="icon">⚡</div><h3>Inscripción</h3><p>Regístrate directamente para participar.</p></div>
+</div>
+</section>
+
+<section id="inscripcion">
+<h2 class="title">📝 Inscripción</h2><p class="sub">Completa tus datos y luego envíalos por WhatsApp.</p>
+<form class="form" onsubmit="sendWhatsApp(event)">
+<input id="name" required placeholder="Nombre">
+<input id="ffid" required placeholder="ID de Free Fire">
+<input id="team" placeholder="Nombre del equipo">
+<input id="phone" placeholder="Número de contacto">
+<textarea id="note" placeholder="Mensaje o información adicional"></textarea>
+<button class="btn full" type="submit">📲 Enviar inscripción por WhatsApp</button>
+</form>
+</section>
+
+<section id="contacto">
+<h2 class="title">📞 Contacto</h2><p class="sub">Comunícate directamente con FF George CUP.</p>
+<div class="contact">
+<a class="btn" href="https://wa.me/51937706166" target="_blank">WhatsApp</a>
+<a class="btn alt" href="https://www.tiktok.com/search?q=FF%20George%20CUP%20torneos" target="_blank">TikTok: FF George CUP torneos ⚡🇵🇪💰</a>
+</div>
+</section>
+</main>
+
+<footer>© <span id="year"></span> FF George CUP • Torneos Free Fire 🇵🇪</footer>
+
+<div id="editor">
+<div class="modal">
+<h2>✏️ Editar página</h2>
+<p style="color:#aaa">Los cambios se guardan en este navegador.</p>
+<label>Texto de bienvenida</label><input id="editWelcome">
+<label>Premio del primer lugar</label><input id="editPrize" value="S/ 60">
+<label>Nombre de la página</label><input id="editName" value="FF GEORGE CUP">
+<label>Imagen / enlace opcional</label><input id="editImage" placeholder="Pega aquí un enlace de imagen (opcional)">
+<div class="modal-actions"><button class="btn" onclick="saveEdits()">Guardar</button><button class="btn alt" onclick="closeEditor()">Cancelar</button></div>
+</div></div>
+
+<script>
+const KEY='ffGeorgeCupData';
+const data=JSON.parse(localStorage.getItem(KEY)||'{}');
+function apply(){
+ if(data.welcome) document.getElementById('welcome').textContent=data.welcome;
+ if(data.prize) document.querySelector('.price').textContent=data.prize;
+ if(data.name){document.querySelector('.logo').innerHTML='FF <span>'+data.name.replace(/^FF\\s*/i,'')+'</span> ⚡';document.title=data.name+' | Torneos Free Fire'}
+ if(data.image){document.querySelector('.visual').style.backgroundImage=`linear-gradient(#0005,#0005),url("${data.image}")`;document.querySelector('.visual').style.backgroundSize='cover';}
+}
+function openEditor(){
+ document.getElementById('editWelcome').value=document.getElementById('welcome').textContent;
+ document.getElementById('editPrize').value=document.querySelector('.price').textContent;
+ document.getElementById('editName').value=data.name||'FF GEORGE CUP';
+ document.getElementById('editImage').value=data.image||'';
+ document.getElementById('editor').style.display='block';
+}
+function closeEditor(){document.getElementById('editor').style.display='none'}
+function saveEdits(){
+ data.welcome=document.getElementById('editWelcome').value;
+ data.prize=document.getElementById('editPrize').value;
+ data.name=document.getElementById('editName').value;
+ data.image=document.getElementById('editImage').value;
+ localStorage.setItem(KEY,JSON.stringify(data)); apply(); closeEditor();
+}
+function sendWhatsApp(e){
+ e.preventDefault();
+ const msg=`INSCRIPCIÓN FF GEORGE CUP%0A%0ANombre: ${encodeURIComponent(document.getElementById('name').value)}%0AID Free Fire: ${encodeURIComponent(document.getElementById('ffid').value)}%0AEquipo: ${encodeURIComponent(document.getElementById('team').value)}%0AContacto: ${encodeURIComponent(document.getElementById('phone').value)}%0AMensaje: ${encodeURIComponent(document.getElementById('note').value)}`;
+ window.open('https://wa.me/51937706166?text='+msg,'_blank');
+}
+document.getElementById('year').textContent=new Date().getFullYear(); apply();
+</script>
+</body></html>
