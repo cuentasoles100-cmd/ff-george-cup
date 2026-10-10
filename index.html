@@ -35,7 +35,7 @@ footer{border-top:1px solid #2b1111;text-align:center;color:#aaa;padding:30px 20
 <header><div class="nav">
 <div class="logo">FF <span>GEORGE CUP</span> ⚡</div>
 <nav><a href="#torneo">Torneo</a><a href="#inscripcion">Inscripción</a><a href="#contacto">Contacto</a></nav>
-<button class="btn alt" onclick="openEditor()">✏️ Editar página</button>
+<button id="adminButton" class="btn alt" onclick="openEditor()" style="display:none;">✏️ Editar página</button>
 </div></header>
 
 <main>
@@ -123,5 +123,11 @@ function sendWhatsApp(e){
  window.open('https://wa.me/51937706166?text='+msg,'_blank');
 }
 document.getElementById('year').textContent=new Date().getFullYear(); apply();
+ if(location.hash==='#admin'){
+  const clave=prompt('Clave de administrador:');
+  if(clave==='George311010'){
+    document.getElementById('adminButton').style.display='inline-block';
+  }
+ }
 </script>
 </body></html>
